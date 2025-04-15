@@ -11,7 +11,7 @@
 ###############Function Definitions:
 
 import art as a
-import random as r
+import secrets
 
 def validator(option_a, option_b, prompt):
   correct = True
@@ -39,7 +39,7 @@ def get_difficulty(chosen_setting):
   return att
   
 def game(attempts):
-  answer = r.randint(1, 100)
+  answer = secrets.SystemRandom().randint(1, 100)
   game_on = True
   correct_answer = False
   while game_on and attempts > 0:
